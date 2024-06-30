@@ -1,7 +1,91 @@
-<html>
- <head>
-  <script>
-   window.location.replace("https://t.me/Zubayer_Op_Official");
-  </script>
- </head>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>Denver Plyr Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/xS150Lb/images-q-tbn-ANd9-Gc-Q4l-Eeln-Z5irh-Wl-KWQWS4f-KY1-PTk-Ixdz-XH-9l-m8lu-AYIu-C35-KEh-Zpa-Vn1c-s-10.jpg">
+<!-- Plyr CSS -->
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
+<!-- Plyr JS -->
+<script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+<!-- Hls.js -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<link rel="stylesheet" href="https://kingkohli.pages.dev/Player/PlyrPlayer.css">
+<!-- Player Theme CSS -->
+</head>
+<body >
+<div id="loading" class="loading">
+<div style="color:red;" class="loading-text">
+<span style="color:red;" class="loading-text-words">D</span>
+<span style="color:red;" class="loading-text-words">E</span>
+<span style="color:red;" class="loading-text-words">N</span>
+<span style="color:red;" class="loading-text-words">V</span>
+<span style="color:red;" class="loading-text-words">E</span>
+<span style="color:red;" class="loading-text-words">R</span>
+</div>
+</div>
+<video id="video">
+<source type="hls" src="
+https://fifabd.xyz/tttttt/play.php?id=1&q=720"></video>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const videoElement = document.querySelector("video");
+  const videoSource = videoElement.getElementsByTagName("source")[0].src;
+  const plyrOptions = {};
+
+  // Initialize Plyr
+  if (Hls.isSupported()) {
+    const hlsConfig = {
+      maxMaxBufferLength: 100,
+    };
+    const hlsInstance = new Hls(hlsConfig);
+
+    hlsInstance.loadSource(videoSource);
+    hlsInstance.on(Hls.Events.MANIFEST_PARSED, (event, data) => {
+      const qualityLevels = hlsInstance.levels.map(level => level.height);
+      plyrOptions.quality = {
+        default: qualityLevels[0],
+        options: qualityLevels,
+        forced: true,
+        onChange: height => {
+          hlsInstance.levels.forEach((level, index) => {
+            if (level.height === height) {
+              hlsInstance.currentLevel = index;
+            }
+          });
+        },
+      };
+      // Initialize Plyr after Hls is loaded
+      const plyrPlayer = new Plyr(videoElement, plyrOptions);
+    });
+
+    hlsInstance.attachMedia(videoElement);
+    window.hls = hlsInstance;
+  } else {
+    // Initialize Plyr without Hls
+    const plyrPlayer = new Plyr(videoElement, plyrOptions);
+  }
+
+  // Hide loading element after 5 seconds
+  setTimeout(() => {
+    document.getElementById('loading').style.display = 'none';
+  }, 5000);
+});
+const plyrOptions = {
+  muted: true,
+  "autostart": true,
+  repeat: true,
+  volume: 100,
+  mute: false,
+  setPip: false,  
+  "stretching": "exactfit",
+              "cast": {},
+  // code for if video automatically pause 
+};
+// Do not modified the codes otherwise the player will not work properly.
+// plauer made by Denver1769
+</script>
+</body>
 </html>
