@@ -23,3 +23,6 @@ https://cdn4.hotflix-bd.online:443/Premier-sports1/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-logo="https://images.fancode.com/eyJrZXkiOiJza2lsbHVwLXVwbG9hZHMvcHJvZC1pbWFnZXMvMjAyNC8wNi9NYXRjaC0yX0xhbmthLVByZW1pZXItTGVhZ3VlLU9MRDEucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwicG9zaXRpb24iOiJ0b3AiLCJ3aWR0aCI6OTMwLCJoZWlnaHQiOjQxNH19LCJvdXRwdXRGb3JtYXQiOiJ3ZWJwIn0=" group-title="Zubayer Op",LPL Android 
 https://bdixhd.online/tsportshd/stream.php?stream=https://live-cdn.tsports.com/live-01/master_1080.m3u8&id=02&e=.m3u8
+
+#EXTINF:-1 tvg-logo="https://image.tsports.com/images/mobile_logo/1719127161-LIVE.jpg" group-title="Zubayer Op",Copa 2024
+https://cdn.querysports.com/hls/copa_720.m3u8
