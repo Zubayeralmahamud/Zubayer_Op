@@ -6,6 +6,9 @@ https://madplay.live/hls/jiotv/stream.php?id=523&e=.m3u8
 #EXTINF:-1 tvg-logo="https://image.tsports.com/images/mobile_logo/1718274576-EURO-LIVE-1280-.png" group-title="Zubayer Op",Euro 2024 Hindi
 https://madplay.live/hls/jiotv/stream.php?id=892&e=.m3u8
 
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLdIn-cLiR_miVa5bc-KKf4T8xEbLwLIo105lrNxLw37JdnV_wZcGkV6zR&s=10" group-title="Zubayer Op",Sports 18
+https://madplay.live/hls/jiotv/stream.php?id=1984&e=.m3u8
+
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten_HD.png" group-title="Zubayer Op",Sony Ten 1
 https://madplay.live/hls/jiotv/stream.php?id=514&e=.m3u8
 
